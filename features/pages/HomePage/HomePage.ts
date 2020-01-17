@@ -1,5 +1,5 @@
 import { Browser, Page } from 'puppeteer'
-import { BasePage } from "../BasePage"
+import { BasePage } from "../base/BasePage"
 
 class HomePage extends BasePage {
     public pageTitle = '[class*="headline"]'

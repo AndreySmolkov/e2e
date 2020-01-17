@@ -1,7 +1,7 @@
 import { ElementHandle, JSHandle, Page, Response } from "puppeteer";
-import { keys, options } from "../support/data";
-import { errorMessages as errors } from "../support/errorMessages"
-import { BasePage} from "./BasePage"
+import { keys, options } from "../../support/data";
+import { errorMessages as errors } from "../../support/errorMessages"
+import { PageObject, PageClass } from './types'
 
 const { delays, timeouts } = options;
 
@@ -40,9 +40,9 @@ class Base {
   public async clickAndNavigate(
     page: Page,
     selector: string,
-    NextPage: BasePage,
+    NextPage: PageClass,
     timeout: number = timeouts.normal
-  ): Promise<BasePage>{
+  ): Promise<PageObject>{
     await Promise.all([
       page.waitForNavigation(),
       this.clickOn(selector, page, timeout)

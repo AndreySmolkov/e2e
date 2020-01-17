@@ -1,8 +1,8 @@
 import { Browser, Page } from "puppeteer";
-import { options, urls } from "../support/data";
+import { options, urls } from "../../support/data";
 import { Base } from "./Base";
-import { errorMessages as errors } from "../support/errorMessages"
-import { Footer } from "./components/Footer"
+import { errorMessages as errors } from "../../support/errorMessages"
+import { Footer } from "../components/Footer"
 
 const { timeouts } = options
 
